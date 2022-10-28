@@ -1,0 +1,3 @@
+[submodule "libs/nanovg-zig"]
+	path = libs/nanovg-zig
+	url = https://github.com/fabioarnold/nanovg-zig.git
