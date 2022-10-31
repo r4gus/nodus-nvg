@@ -9,6 +9,8 @@ const c = @cImport({
 
 const PerfGraph = @import("perf.zig");
 
+const core = @import("core.zig");
+
 var blowup: bool = false;
 var screenshot: bool = false;
 var premult: bool = false;
@@ -128,4 +130,8 @@ pub fn main() !void {
         c.glfwSwapBuffers(window);
         c.glfwPollEvents();
     }
+}
+
+test "main test" {
+    _ = core;
 }

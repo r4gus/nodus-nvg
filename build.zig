@@ -20,6 +20,7 @@ pub fn build(b: *std.build.Builder) void {
     exe.addIncludePath("libs/nanovg-zig/lib/gl2/include");
     exe.addCSourceFile("libs/nanovg-zig/lib/gl2/src/glad.c", &.{});
     exe.linkSystemLibrary("glfw3");
+    exe.addPackagePath("uuid-zig", "libs/uuid-zig/src/main.zig");
     exe.install();
 
     const run_cmd = exe.run();
@@ -33,6 +34,7 @@ pub fn build(b: *std.build.Builder) void {
 
     const exe_tests = b.addTest("src/main.zig");
     exe_tests.setTarget(target);
+    exe_tests.addPackagePath("uuid-zig", "libs/uuid-zig/src/main.zig");
     exe_tests.setBuildMode(mode);
 
     const test_step = b.step("test", "Run unit tests");

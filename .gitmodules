@@ -1,3 +1,6 @@
 [submodule "libs/nanovg-zig"]
 	path = libs/nanovg-zig
 	url = https://github.com/fabioarnold/nanovg-zig.git
+[submodule "libs/uuid-zig"]
+	path = libs/uuid-zig
+	url = https://github.com/r4gus/uuid-zig.git
